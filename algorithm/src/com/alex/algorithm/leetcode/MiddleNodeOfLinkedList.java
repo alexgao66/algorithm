@@ -6,6 +6,8 @@ package com.alex.algorithm.leetcode;
  * 1）定义个slow和fast节点，两个节点初始状态时都指向头节点
  * 2）判断fast节点以及fast的下一个节点均不为null，此时slow移动一位，fast移动两位；否则，此时slow指向的就是目标节点，直接返回；
  *
+ * !!! 难点：1）如何证明这样移动完之后slow就居中了？2）终止条件的选择：是判断fast的next，还是判断fast的next的next，需要画图判断
+ *
  * @author: gaojun
  * @date: 2024/3/4
  **/
