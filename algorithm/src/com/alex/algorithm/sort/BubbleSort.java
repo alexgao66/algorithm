@@ -2,8 +2,6 @@ package com.alex.algorithm.sort;
 
 /**
  * 冒泡排序
- * 排序逻辑：
- * 两个相邻的元素
  *
  * @author: gaojun
  * @date: 2024/3/5
@@ -23,20 +21,13 @@ public class BubbleSort {
                     array[j] = temp;
                 }
             }
-            printIntArray(array);
+            ArrayUtil.printIntArray(array);
             System.out.println();
         }
         return array;
     }
 
-    private static void printIntArray(int[] array) {
-        for (int i = 0; i < array.length; ++i) {
-            System.out.print(array[i]);
-            if (i != array.length - 1) {
-                System.out.print(",");
-            }
-        }
-    }
+
 
     public static int[] bubbleSortImprove(int[] array) {
         for(int i = array.length - 1; i > 0; --i) {
@@ -52,7 +43,7 @@ public class BubbleSort {
             if (!swap) {
                 break;
             }
-            printIntArray(array);
+            ArrayUtil.printIntArray(array);
             System.out.println();
         }
         return array;
