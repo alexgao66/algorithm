@@ -99,7 +99,7 @@ public class BinaryTree {
 	 * 树节点
 	 * @author alex
 	 */
-	private class Node {
+	public static class Node {
 		
 		/**
 		 * 节点值
@@ -120,6 +120,39 @@ public class BinaryTree {
 			this.element = element;
 			this.leftChild = leftChild;
 			this.rightChild = rightChild;
+		}
+
+		public Integer getElement() {
+			return element;
+		}
+
+		public void setElement(Integer element) {
+			this.element = element;
+		}
+
+		public Node getLeftChild() {
+			return leftChild;
+		}
+
+		public void setLeftChild(Node leftChild) {
+			this.leftChild = leftChild;
+		}
+
+		public Node getRightChild() {
+			return rightChild;
+		}
+
+		public void setRightChild(Node rightChild) {
+			this.rightChild = rightChild;
+		}
+
+		@Override
+		public String toString() {
+			return "Node{" +
+					"element=" + element +
+					", leftChild=" + leftChild +
+					", rightChild=" + rightChild +
+					'}';
 		}
 	}
 }
