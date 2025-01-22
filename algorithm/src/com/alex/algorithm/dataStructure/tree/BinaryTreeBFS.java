@@ -1,6 +1,5 @@
 package com.alex.algorithm.dataStructure.tree;
 
-import javax.swing.tree.TreeNode;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
