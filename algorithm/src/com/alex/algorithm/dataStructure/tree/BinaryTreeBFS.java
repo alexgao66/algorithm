@@ -4,6 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * 链表结构的二叉树的广度优先遍历
+ */
 public class BinaryTreeBFS {
 
     public static void main(String[] args) {
