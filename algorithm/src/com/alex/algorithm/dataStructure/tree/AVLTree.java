@@ -7,8 +7,7 @@ package com.alex.algorithm.dataStructure.tree;
  */
 public class AVLTree extends BinarySearchTree{
 
-	public AVLTree(Node root) {
-		super(root);
+	public AVLTree() {
 	}
 	
 	

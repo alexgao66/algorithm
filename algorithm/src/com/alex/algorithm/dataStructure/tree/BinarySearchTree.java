@@ -5,21 +5,33 @@ package com.alex.algorithm.dataStructure.tree;
  * @author alex
  *
  */
-public class BinarySearchTree<T> {
+public class BinarySearchTree<T extends Number> {
 	
 	private Node<T> root;
 	
-	public BinarySearchTree(Node<T> root) {
-		this.root = root;
+	public BinarySearchTree() {
 	}
 	
 	public void makeEmpty() {
 		
 	}
 	
-	public int find(T val) {
-		
-		return -1;
+	public Node<T> find(T val) {
+		if (root == null || val == null) {
+			return null;
+		}
+		Node<T> cur = root;
+		while (cur!= null) {
+			if (cur.val.intValue() == val.intValue()) {
+                return cur;
+            }
+            if (cur.val.intValue() > val.intValue()) {
+                cur = cur.left;
+            } else {
+                cur = cur.right;
+            }
+		}
+		return null;
 	}
 	
 	public T findMax() {
@@ -31,7 +43,28 @@ public class BinarySearchTree<T> {
 	}
 	
 	public void insert(T val) {
-		
+		if (root == null) {
+			root = new Node<>(val, null, null);
+			return;
+		}
+		Node<T> cur = root,pre = null;
+		while (cur!= null) {
+			if (cur.val.intValue() == val.intValue()) {
+				return;
+			}
+			pre = cur;
+			if (cur.val.intValue() > val.intValue()) {
+                cur = cur.left;
+            } else {
+                cur = cur.right;
+            }
+		}
+		Node<T> newNode = new Node<>(val, null, null);
+		if (val.intValue() < pre.val.intValue()) {
+			pre.left = newNode;
+		} else {
+			pre.right = newNode;
+		}
 	} 
 	
 	public void delete(T val) {
@@ -56,6 +89,14 @@ public class BinarySearchTree<T> {
 			this.left = left;
 			this.right = right;
 		}
-		
+
+		@Override
+		public String toString() {
+			return "Node{" +
+					"val=" + val +
+					", left=" + left +
+					", right=" + right +
+					'}';
+		}
 	}
 }
