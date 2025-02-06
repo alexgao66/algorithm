@@ -10,9 +10,26 @@ public class BinarySearchTreeTest {
         bst.insert(4);
         bst.insert(6);
         bst.insert(8);
+        bst.insert(10);
 
         System.out.println(bst.find(4));
-        System.out.println(bst.find(7));
+
         System.out.println(bst.find(9));
+
+        System.out.println(bst.find(3));
+        bst.delete(4);
+        System.out.println(bst.find(3));
+
+        System.out.println(bst.find(3));
+        bst.delete(4);
+        System.out.println(bst.find(3));
+
+        System.out.println(bst.find(7));
+        bst.delete(8);
+        System.out.println(bst.find(7));
+
+        System.out.println(bst.find(5));
+        bst.delete(7);
+        System.out.println(bst.find(5));
     }
 }

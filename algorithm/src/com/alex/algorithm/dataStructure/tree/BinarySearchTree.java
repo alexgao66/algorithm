@@ -68,7 +68,44 @@ public class BinarySearchTree<T extends Number> {
 	} 
 	
 	public void delete(T val) {
-		
+		if(root == null || val == null) {
+			return;
+		}
+		Node<T> cur = root, pre = null;
+		while (cur!= null) {
+			if (cur.val.intValue() == val.intValue()) {
+				break;
+			}
+			pre = cur;
+			if (cur.val.intValue() > val.intValue()) {
+				cur = cur.left;
+			} else {
+				cur = cur.right;
+			}
+		}
+		if (cur == null) {
+            return;
+        }
+		// cur子节点数量为0或1
+		if (cur.left == null || cur.right == null) {
+			Node<T> child = cur.left != null ? cur.left : cur.right;
+			if(cur != root) {
+				if (cur == pre.left) {
+                    pre.left = child;
+                } else {
+                    pre.right = child;
+                }
+			}else {
+				root = child;
+			}
+			return;
+		}
+		Node<T> minNodeInRightChildTree = cur.right;
+		while(minNodeInRightChildTree.left != null) {
+			minNodeInRightChildTree = minNodeInRightChildTree.left;
+		}
+		delete(minNodeInRightChildTree.val);
+		cur.val = minNodeInRightChildTree.val;
 	}
 	
 	public T retrieve(int pos) {
