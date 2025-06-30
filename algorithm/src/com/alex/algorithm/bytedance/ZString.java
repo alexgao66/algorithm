@@ -3,8 +3,6 @@ package com.alex.algorithm.bytedance;
 /**
  * @author: gaojun
  * @date: 2024/1/22
- * Copyright (C) 2022 Meituan
- * All rights reserved
  **/
 public class ZString {
     public static String convert(String s, int numRows) {
