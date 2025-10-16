@@ -5,25 +5,25 @@ package com.alex.algorithm.leetcode;
  * @author: gaojun
  * @date: 2024/3/4
  **/
-public class LinkNode {
+public class ListNode {
 
-    private Integer value;
+     Integer val;
 
-    LinkNode next;
+    ListNode next;
 
-    public LinkNode(Integer value, LinkNode next) {
-        this.value = value;
+    public ListNode(Integer val, ListNode next) {
+        this.val = val;
         this.next = next;
     }
 
-    public LinkNode(Integer value) {
-        this.value = value;
+    public ListNode(Integer val) {
+        this.val = val;
     }
 
     @Override
     public String toString() {
         return "LinkNode{" +
-                "value=" + value +
+                "value=" + val +
                 ", next=" + next +
                 '}';
     }

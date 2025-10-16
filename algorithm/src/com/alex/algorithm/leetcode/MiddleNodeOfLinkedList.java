@@ -13,12 +13,12 @@ package com.alex.algorithm.leetcode;
  **/
 public class MiddleNodeOfLinkedList {
 
-    public static LinkNode findMiddleNode(LinkNode head) {
+    public static ListNode findMiddleNode(ListNode head) {
         if (head == null) {
             return null;
         }
-        LinkNode slow = head;
-        LinkNode fast = head;
+        ListNode slow = head;
+        ListNode fast = head;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
@@ -32,30 +32,30 @@ public class MiddleNodeOfLinkedList {
     }
 
     private static void testByOddNum() {
-        LinkNode n1 = new LinkNode(1);
-        LinkNode n2 = new LinkNode(2);
+        ListNode n1 = new ListNode(1);
+        ListNode n2 = new ListNode(2);
         n1.next = n2;
-        LinkNode n3 = new LinkNode(3);
+        ListNode n3 = new ListNode(3);
         n2.next = n3;
-        LinkNode n4 = new LinkNode(4);
+        ListNode n4 = new ListNode(4);
         n3.next = n4;
-        LinkNode n5 = new LinkNode(5);
+        ListNode n5 = new ListNode(5);
         n4.next = n5;
         System.out.println("Odd LinkNode:" + n1);
         System.out.println("testByOddNum:" + findMiddleNode(n1));
     }
 
     private static void testByEvenNum() {
-        LinkNode n1 = new LinkNode(1);
-        LinkNode n2 = new LinkNode(2);
+        ListNode n1 = new ListNode(1);
+        ListNode n2 = new ListNode(2);
         n1.next = n2;
-        LinkNode n3 = new LinkNode(3);
+        ListNode n3 = new ListNode(3);
         n2.next = n3;
-        LinkNode n4 = new LinkNode(4);
+        ListNode n4 = new ListNode(4);
         n3.next = n4;
-        LinkNode n5 = new LinkNode(5);
+        ListNode n5 = new ListNode(5);
         n4.next = n5;
-        LinkNode n6 = new LinkNode(6);
+        ListNode n6 = new ListNode(6);
         n5.next = n6;
         System.out.println("even LinkNode:" + n1);
         System.out.println("testByEvenNum:" + findMiddleNode(n1));
