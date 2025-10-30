@@ -3,6 +3,7 @@ package com.alex.algorithm.leetcode;
 import java.util.*;
 
 /**
+ * find two element's index, which the sum of the two element equal to the target.
  * @author: gaojun
  * @date: 2025/8/4
  **/

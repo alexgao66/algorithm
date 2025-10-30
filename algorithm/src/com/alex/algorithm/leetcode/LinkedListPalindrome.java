@@ -30,7 +30,7 @@ public class LinkedListPalindrome {
         ListNode p1 = head;
         ListNode p2 = reversedHalfHeadNode;
         while(result && p2 != null) {
-            if (!p1.val.equals(p2.val)){
+            if (p1.val != p2.val){
                 result = false;
             }
             p1 = p1.next;

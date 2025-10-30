@@ -7,16 +7,16 @@ package com.alex.algorithm.leetcode;
  **/
 public class ListNode {
 
-     Integer val;
+     int val;
 
     ListNode next;
 
-    public ListNode(Integer val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }
 
-    public ListNode(Integer val) {
+    public ListNode(int val) {
         this.val = val;
     }
 

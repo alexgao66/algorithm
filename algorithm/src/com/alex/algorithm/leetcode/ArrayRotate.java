@@ -1,6 +1,7 @@
 package com.alex.algorithm.leetcode;
 
 /**
+ * rotate the array to right by k steps
  * @author: gaojun
  * @date: 2025/9/25
  **/
